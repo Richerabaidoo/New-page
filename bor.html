@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hover Effect Example</title>
+  <style>
+    body {
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      place-content: center;
+      background: black;
+      font-family: sans-serif;
+    }
+
+    .container {
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      background: #333;
+      border-radius: 10px;
+      width: 200px;
+      height: 80px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border-left: 8px solid gold;
+      cursor: pointer;
+      transition: scale 0.3s ease-in-out, color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out, border-image-source 0.3s ease-in-out;
+    }
+
+    .container:hover {
+      scale: 1.05;
+      color: cyan;
+}
+.baseline {
+  padding: 0px;
+  border-radius: 10px;
+  border-bottom: 2px solid aqua;
+  transition: scale 0.3s ease;
+}
+  .baseline:hover {
+    scale: 1.05;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, black, aqua, black);
+    border-image-slice: 1;
+  }
+    
+  </style>
+</head>
+<body>
+  <div class="baseline">
+     <div class="container">Hover Me!</div>
+  </div>
+</body>
+</html>
